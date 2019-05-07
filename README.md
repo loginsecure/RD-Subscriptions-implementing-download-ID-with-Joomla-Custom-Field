@@ -10,46 +10,31 @@ First of all, download the downloadid.php file and add it in a proper folder ins
 
 Now, the Download ID field is ready to be used as any other standard form field within your installation xml file.
 
-This is an example of a module installation file, let's say mod\_somemodule.xml
+This is an example of parts of a module installation file, let's say mod_somemodule.xml
+So the workorder is: Add files, fieldset and then the updateserver.
+
+`<files>`
+  `<folder>assets</folder>`
+`</files>`
 
 `<config>`
-
-`<fields name="params">`
-
-`<fieldset name="basic" addfieldpath="/modules/mod_somemodule/assets/fields">`
-
-`...`
-
-`<field`
-
-`name="dlid"`
-
-`type="downloadid"`
-
-`label="Download ID"`
-
-`description="Download ID description"`
-
-`default=""`
-
-`extension="Some Module"`
-
-`key="dlid"`
-
-`/>`
-
-`...`
-
-`</fieldset>`
-
-`</fields>`
-
+  `<fields name="params">`
+    `<fieldset name="basic" addfieldpath="/modules/mod_somemodule/assets/fields">`
+      `<field`
+      `name="dlid"`
+      `type="downloadid"`
+      `label="Download ID"`
+      `description="Download ID description"`
+      `default=""`
+      `extension="Some Module"`
+      `key="dlid"`
+      `/>`
+    `</fieldset>`
+  `</fields>`
 `</config>`
 
 `<updateservers>`
-
-`<server type="extension" name="Some Module" priority="1">http://www.yourwebsite.com/somemodule_update.xml</server>`
-
+  `<server type="extension" name="Some Module" priority="1">http://www.yourwebsite.com/somemodule_update.xml</server>`
 `</updateservers>`
 
 Important
