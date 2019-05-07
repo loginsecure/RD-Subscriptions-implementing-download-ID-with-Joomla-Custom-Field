@@ -13,29 +13,31 @@ Now, the Download ID field is ready to be used as any other standard form field 
 This is an example of parts of a module installation file, let's say mod_somemodule.xml
 So the workorder is: Add files, fieldset and then the updateserver.
 
-`<files>`
-  `<folder>assets</folder>`
-`</files>`
+```
+<files>
+  <folder>assets</folder>
+</files>
 
-`<config>`
-  `<fields name="params">`
-    `<fieldset name="basic" addfieldpath="/modules/mod_somemodule/assets/fields">`
-      `<field`
-      `name="dlid"`
-      `type="downloadid"`
-      `label="Download ID"`
-      `description="Download ID description"`
-      `default=""`
-      `extension="Some Module"`
-      `key="dlid"`
-      `/>`
-    `</fieldset>`
-  `</fields>`
-`</config>`
+<config>
+  <fields name="params">
+    <fieldset name="basic" addfieldpath="/modules/mod_somemodule/assets/fields">
+      <field
+      name="dlid"
+      type="downloadid"
+      label="Download ID"
+      description="Download ID description"
+      default=""
+      extension="Some Module"
+      key="dlid"
+      />
+    </fieldset>
+  </fields>
+</config>
 
-`<updateservers>`
-  `<server type="extension" name="Some Module" priority="1">http://www.yourwebsite.com/somemodule_update.xml</server>`
-`</updateservers>`
+<updateservers>
+  <server type="extension" name="Some Module" priority="1">http://www.yourwebsite.com/somemodule_update.xml</server>
+</updateservers>
+```
 
 Important
 
