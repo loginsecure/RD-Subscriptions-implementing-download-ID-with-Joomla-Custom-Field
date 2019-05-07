@@ -21,7 +21,7 @@ class JFormFieldDownloadID extends JFormFieldText {
     public function getInput() {
 
         if ($this->value) {
-            $extra_query = "'{$this->element['key']}={$this->value}'";
+            $extra_query = "'{$this->element['key']}key={{$this->value}}'";
 
             $db = JFactory::getDbo();
             $query = $db->getQuery(true)
