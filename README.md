@@ -28,30 +28,29 @@ So the workorder is: Add files, fieldset and then the updateserver.
 
 ```
 <files>
-  <folder>assets</folder>
+  <folder>models</folder>
 </files>
+
+<updateservers>
+  <server type="extension" priority="1" name="Your Extension"><![CDATA[http://domain.extension/index.php?option=com_rdsubs&view=updater&format=xml&cat=#&element=mod_yourextension&type=module]]></server>
+</updateservers>
+<!-- Where # is the catagory number. Use the RD Subscription build in Menu item: Joomla XML Feed to generate the correct links. -->
 
 <config>
   <fields name="params">
-		<fieldset name="subscription" addfieldpath="/modules/mod_yourextension/models/fields">
-			<field
-				name="dlid"
-				type="downloadid"
-				label="MOD_YOUREXTENSION_-AUTOUPDATESUBSCRIPTIONTOKEN-_LABEL"
-				description="MOD_YOUREXTENSION_-AUTOUPDATESUBSCRIPTIONTOKEN-_DESC"
-				default=""
-				extension="Your Extension"
-				key="key="
-			/>
-		</fieldset>
+    <fieldset name="subscription" addfieldpath="/modules/mod_yourextension/models/fields">
+      <field
+	name="dlid"
+	type="downloadid"
+	label="MOD_YOUREXTENSION_-AUTOUPDATESUBSCRIPTIONTOKEN-_LABEL"
+	description="MOD_YOUREXTENSION_-AUTOUPDATESUBSCRIPTIONTOKEN-_DESC"
+	default=""
+	extension="Your Extension"
+	key="key="
+	/>
+    </fieldset>
   </fields>
 </config>
-
-	<updateservers>
-		<server type="extension" priority="1" name="Your Extension"><![CDATA[http://domain.extension/index.php?option=com_rdsubs&view=updater&format=xml&cat=#&element=mod_yourextension&type=module]]></server>
-	</updateservers>
-  
-  <!-- Where # is the catagory number. Use the RD Subscription build in Menu item: Joomla XML Feed to generate the correct links. -->
 ```
 
 Important
