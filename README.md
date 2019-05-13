@@ -1,4 +1,4 @@
-# Big thanks go out to Mohamed Abdelaziz (mabdelaziz77)
+# Big thanks go out to Mohamed Abdelaziz (mabdelaziz77)!
 
 The original creator of the below code is [mabdelaziz77](https://github.com/mabdelaziz77) and we want to thank him for creating and above all sharing this code with the world. The code is efficient and quick to understand and it helped us a lot and we are sure it will help a lot of other people as well. So thank you very much!
 
